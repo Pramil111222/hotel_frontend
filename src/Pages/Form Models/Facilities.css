@@ -1,0 +1,32 @@
+.facilities-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+    gap: 10px;
+}
+
+.facility-card {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    background-color: #f8f9fa;
+    transition: all 0.3s ease-in-out;
+}
+
+.facility-card.selected {
+    background-color: #007bff;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .facilities-cards {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .facilities-cards {
+        grid-template-columns: repeat(1, 1fr); /* 1 column on extra small screens */
+    }
+}
